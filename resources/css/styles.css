@@ -1,0 +1,307 @@
+html {
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    font-family: 'Josefin Sans';
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    border-bottom: 1px solid black;
+}
+
+nav section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    color: #585352;
+}
+
+.nav-btn {
+    transition: color 200ms ease-in-out,
+    font-size 150ms ease-in-out;
+}
+
+.nav-btn:hover {
+    color: black;
+}
+
+.nav-btn:active {
+    font-size: 0.9em;
+}
+
+.company-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 32px;
+    margin-right: 16px;
+}
+.mission {
+    height: 800px;
+    margin-top: 6em;
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    border-radius: 3em;
+    margin-left: 32px;
+    margin-right: 32px;
+    box-shadow: 2px 2px 2px 0 #001;
+
+}
+
+.mission-image {
+    height: 700px;
+    width: 60%;
+    margin: 0 50px;
+}
+
+.mission-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+}
+
+.mission-text {
+    opacity: 0.7;
+    font-size: 1.5em;
+    width: 40%;
+}
+
+.mission-button {
+    margin-top: 2em;
+}
+
+.btn {
+    background-color: #585352;
+    border-radius: 0.5em;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: padding 150ms ease-in-out,
+    opacity 150ms ease-in-out;
+}
+
+.btn:hover {
+    padding: 25px 20px;
+}
+
+.btn:active {
+    opacity: 0.7;
+    padding: 20px 15px;
+}
+
+.products {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-auto-rows: minmax(450px, auto);
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 1500px;
+    gap: 50px;
+    margin: 32px;
+}
+
+.product-title {
+    grid-row: 1 / 2;
+    grid-column: 1 / span 3;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.product-card {
+    background-color: darkgray;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 0 #001;
+}
+
+.card-image {
+    height: 185px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: 80%;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.card-text {
+    line-height: 1.2em;
+    margin-left: 10%;
+}
+
+.card-text ul {
+    padding-left: 15px;
+    margin: 0;
+    position: relative;
+    bottom: 1em;
+}
+
+.team {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-auto-rows: minmax(450px, auto);
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 1500px;
+    gap: 50px;
+    margin: 32px;
+}
+
+.team-title {
+    grid-row: 1 / 2;
+    grid-column: 1 / span 3;
+    justify-items: center;        align-items: center;
+    font-size: 1.5em;
+}
+
+.team-card {
+    background-color: darkgray;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 0 #001;
+}
+
+footer {
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    float: bottom;
+}
+
+footer a {
+    transition: color 200ms ease-in-out;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: lightblue;
+}
+
+footer a:active {
+    color: #006;
+}
+
+@media only screen and (max-width: 768px) {
+    .mission {
+        display: block;
+        padding-top: 2em;
+    }
+
+    .mission-image {
+        height: 40%;
+        width: 86%;
+    }
+
+    .mission-image img {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .mission-text {
+        text-align: center;
+        margin: auto;
+        width: 500px;
+    }
+
+    .products {
+        grid-auto-rows: minmax(450px, auto);
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 2000px;
+    }
+    
+    .product-title {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+    }
+
+    .team {
+        grid-auto-rows: minmax(450px, auto);
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 2000px;
+    }
+
+    .team-title {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    nav h3 {
+        display: none;
+    }
+
+    .mission {
+        height: 500px;
+    }
+
+    .mission-image {
+        display: none;
+    }
+
+    .mission-text {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .products {
+        grid-auto-rows: minmax(450px, auto);
+        grid-template-columns: repeat(1, 1fr);
+        max-height: 4000px;
+    }
+    
+    .product-title {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .team {
+        grid-auto-rows: minmax(450px, auto);
+        grid-template-columns: repeat(1, 1fr);
+        max-height: 4000px;
+    }
+    
+    .team-title {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .terms {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #available {
+        display: none;
+    }
+}
+
+
+
