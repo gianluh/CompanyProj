@@ -30,6 +30,16 @@ nav a {
     color: #585352;
 }
 
+.about,
+.product,
+.ourteam,
+.contact,
+.company-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .nav-btn {
     transition: color 200ms ease-in-out,
     font-size 150ms ease-in-out;
@@ -92,14 +102,20 @@ nav a {
     border-radius: 0.5em;
     padding: 20px 15px;
     text-decoration: none;
-    color: black;
+    color: #1c1b1b;
     font-weight: bold;
     transition: padding 150ms ease-in-out,
-    opacity 150ms ease-in-out;
+    opacity 150ms ease-in-out,
+    font-size 150ms ease-in-out,
+    background-color 150ms ease-in-out,
+    color 150ms ease-in-out;
 }
 
 .btn:hover {
-    padding: 25px 20px;
+    padding: 22px 17px;
+    font-size: 1.1em;
+    background-color: #413f3e;
+    color: black;
 }
 
 .btn:active {
@@ -132,13 +148,15 @@ nav a {
 }
 
 .card-image {
-    height: 185px;
+    height: auto;
     display: flex;
     justify-content: center;
+    border-radius: 1em;
+    border: 1px solid darkgray;
 }
 
 .card-image img {
-    height: 100%;
+    height: auto;
     width: 80%;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
@@ -257,8 +275,22 @@ footer a:active {
         display: none;
     }
 
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav section {
+        width: 145px;
+    }
+
+    .company-name {
+        width: 100%;
+    }
+
     .mission {
-        height: 500px;
+        height: auto;
+        min-height: 500px;
     }
 
     .mission-image {
@@ -299,6 +331,17 @@ footer a:active {
 
 @media only screen and (max-width: 480px) {
     #available {
+        display: none;
+    }
+
+    .mission {
+        padding-bottom: 3em;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .mission-button {
         display: none;
     }
 }
